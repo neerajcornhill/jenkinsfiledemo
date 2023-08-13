@@ -7,17 +7,15 @@ pipeline{
    // in agent any = any available server 
    // agent any
 
-  triggers {
-        pollSCM('* * * * *')
-    }
+  
   
    stages {
-    stage('checkout') {
-      steps {
-        checkout scm: [$class: 'GitSCM',
-          userRemoteConfigs: [url: 'https://github.com/Sonal0409/DevOpsCodeDemo.git']], poll: true
-      }
-    }
+
+     stage('Clone a Repo'){
+           steps{
+               git 'https://github.com/Sonal0409/DevOpsCodeDemo.git'
+           }
+       }
   
        
        stage('Compile the code'){
