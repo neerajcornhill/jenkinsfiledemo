@@ -18,7 +18,7 @@ pipeline{
           userRemoteConfigs: [url: 'https://github.com/Sonal0409/DevOpsCodeDemo.git']], poll: true
       }
     }
-  }
+  
        
        stage('Compile the code'){
            steps{
