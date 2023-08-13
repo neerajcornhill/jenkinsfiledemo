@@ -13,9 +13,13 @@ pipeline{
   
    stages{
        stage('Clone a Repo'){
-           steps{
-               git 'https://github.com/Sonal0409/DevOpsCodeDemo.git', poll: true
-           }
+          
+ steps {
+        checkout scm: [$class: 'GitSCM',
+          userRemoteConfigs: [[url: 'https://github.com/Sonal0409/DevOpsCodeDemo.git',
+                              credentialsId: 'myCredId']
+        ], poll: true
+      }
        }
        
        stage('Compile the code'){
