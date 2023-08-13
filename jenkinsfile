@@ -6,6 +6,10 @@ pipeline{
     }
    // in agent any = any available server 
    // agent any
+
+  triggers {
+        pollSCM('* * * * *') # POLL SCM OF REPO B HERE
+    }
   
    stages{
        stage('Clone a Repo'){
