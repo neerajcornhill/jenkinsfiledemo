@@ -8,7 +8,7 @@ pipeline{
    // agent any
 
   triggers {
-        pollSCM('* * * * *') # POLL SCM OF REPO B HERE
+        pollSCM('* * * * *')
     }
   
    stages{
