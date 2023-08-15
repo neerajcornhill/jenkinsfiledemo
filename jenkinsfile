@@ -27,12 +27,10 @@ pipeline{
        stage('CodeReview'){
            steps{
                //sh 'mvn pmd:pmd'
-             //    sh 'mvn sonar:sonar'
-
                 sh 'mvn sonar:sonar \
                   -Dsonar.projectKey=jenkinssonardemo \
                   -Dsonar.host.url=http://44.205.244.173:9000 \
-                  -Dsonar.login=bf158c02f75da22ec61edaf7a4559d3e7c346d69'
+                  -Dsonar.login=bf158c02f75da22ec61edaf7a4559d3e7c346d6'
            }
        }
        
